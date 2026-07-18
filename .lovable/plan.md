@@ -1,68 +1,60 @@
-# bobaman — Spintex Boba Shop Website
+## Scope
 
-A vibrant, mobile-first, WhatsApp-driven boba shop site. No cart, no checkout — every "Order Now" button opens WhatsApp with a pre-filled message naming the drink + size.
+Four changes to the bobaman site:
 
-## Brand
+1. **Logo refresh** — transparent, glossy 3D button-style logo mark with clean flat slogan
+2. **Craveworthy section redesign** — match the reference upload (fruit-scattered, dynamic layout, no white backgrounds on fruit)
+3. **Dedicated `/menu` page** — full menu on its own route
+4. **Dedicated `/story` page** — immersive, image-led narrative with 4 beats
 
-- **Name:** bobaman
-- **Slogan:** "just sip and chop."
-- **Location:** Spintex Road, Accra, Ghana
-- **WhatsApp numbers:** 0548787608 (primary) and 0506324680 (secondary) — primary used for all order buttons, both shown in Contact section
-- **Logo:** uploaded logo uploaded as a Lovable Asset and used in nav + hero + footer
+---
 
-## Design language
+## 1. Logo (glossy 3D button)
 
-- **Scroll-zoned color story** with organic wave/drip SVG dividers between zones:
-  1. Warm caramel / brown (hero, brand story)
-  2. Soft peach / cream (personalization, craveworthy flavors, reviews)
-  3. Punchy pink / berry (menu, toppings, location)
-- **Typography:** Fredoka (bold display for headlines) + Caveat (handwritten accent for taglines) + Inter (body). Loaded via `<link>` in `__root.tsx`, registered in `@theme`.
-- **Scattered decorative elements:** boba pearls, tea leaves, splash shapes as absolute-positioned SVGs throughout.
-- **Motion:** framer-motion fade/slide-in on section headers and menu cards; hero best-seller carousel auto-rotates; reviews carousel auto-scrolls horizontally (pause on hover).
-- **Design tokens:** all colors added to `src/styles.css` as oklch tokens (--caramel, --cream, --peach, --pink, --berry, --whatsapp-green, --gold), mapped in `@theme inline`.
+- Use `imagegen--edit_image` on `user-uploads://ChatGPT_Image_Jul_18_2026_07_05_10_AM.png` with a prompt for: transparent background, glossy 3D embossed depth on the cup mark, top-arc highlight, subtle drop shadow, punchier saturation, slogan kept flat/crisp/legible below.
+- Save as `src/assets/logo.png` and upload via `lovable-assets` → `src/assets/logo.png.asset.json`.
+- Replace references in `Nav.tsx`, `Hero.tsx`, `Footer.tsx` (whichever import the current `logo.jpeg.asset.json`).
+- Remove the old `logo.jpeg.asset.json` pointer via `lovable-assets delete`.
 
-## Page structure (single route `/`)
+## 2. Craveworthy section
 
-1. **Sticky nav** — logo + links (Menu, Story, Location) + WhatsApp CTA
-2. **Hero** — oversized "bobaman" wordmark, handwritten slogan, subheadline ("70+ handcrafted bubble tea drinks, frappes, refreshers & more — Spintex Road, Accra"), auto-rotating best-seller carousel (3 drinks with BEST SELLER badge + price), "View Full Menu" + "Order on WhatsApp" CTAs, floating boba/leaf decorations
-3. **Brand story** — "More Than Just Boba" with original emotional copy
-4. **Sweetness levels** — "Sweeten Your Day, Your Way" — light / medium / full sugar cards
-5. **Personalization** — "Made For You" cup mockup with a handwritten name
-6. **Craveworthy Flavors** — illustrated fruit showcase (banana, pineapple, grape, orange, mango) with paint-splash accents
-7. **Reviews carousel** — auto-scrolling horizontal marquee, pause on hover, gold stars, PLACEHOLDER note
-8. **Full Menu** — search bar, category tabs, drink cards grouped by:
-   - Signature Milk Tea Boba (11 drinks)
-   - Taro Delight Boba (5 drinks)
-   - Cheese Series Boba (4 drinks) — note "more coming soon"
-   Each card: generated drink photo, name, Large/Medium prices, Order Now (WhatsApp green) button
-9. **Toppings & Add-Ons** — chip grid, PLACEHOLDER note, 9 toppings with prices
-10. **Location & Contact** — address, both WhatsApp numbers, embedded Google Map iframe of Spintex Road, big WhatsApp CTA
-11. **Footer** — logo, slogan, socials placeholder
-12. **Floating WhatsApp button** — fixed bottom-right, always visible
+Match reference: pink background, hand-painted scattered fruit illustrations with paint-splash accents, floating boba pearls, "Craveworthy Flavors" headline centered, no rigid single hero image.
 
-## WhatsApp ordering
+- Generate 5–6 individual transparent-PNG fruit illustrations (mango, banana bunch, pineapple, grapes, strawberry, apple slice) in a hand-painted watercolor style, plus 2–3 paint-splash accents.
+- Upload each via `lovable-assets`.
+- Rewrite `src/components/home/Craveworthy.tsx`: absolute-positioned fruit scattered around a centered headline + copy, framer-motion staggered fade/float-in, floating boba pearls (reuse `BobaPearl` decor), keep flavor pill list at bottom.
+- Delete the old `craveworthy-fruits.jpg` asset.
 
-Helper `buildWhatsAppUrl(drinkName, size, price)` → `https://wa.me/233548787608?text=` + encoded `Hi! I'd like to order a {Size} {Drink} (₵{price}). Any toppings I can add: ______`. Ghana country code 233, leading 0 dropped. Every Order Now button and floating button uses this.
+## 3. Dedicated `/menu` page
 
-## Menu data
+- New route file `src/routes/menu.tsx` with its own `head()` (title, description, og).
+- Reuses existing `Menu` component (search + all 3 categories + Order buttons). Wrap with `Nav`, `Footer`, `FloatingWhatsApp`, and a short page-intro header.
+- Update `Nav.tsx` to add a "Menu" link pointing to `/menu` (TanStack `<Link to="/menu">`), keep the homepage "Menu" section anchor working via the existing `#menu` id or convert nav to route link.
+- Homepage `Menu` section stays as a preview but add a "See full menu →" `<Link to="/menu">` CTA at the bottom of the section.
 
-Single `src/data/menu.ts` exporting typed `MenuCategory[]` — easy to extend with frappes/refreshers later. Each drink has `id`, `name`, `largePrice`, `mediumPrice`, `image` (asset pointer), `bestSeller?`.
+## 4. Dedicated `/story` page
 
-## Drink photography
+- New route file `src/routes/story.tsx` with `head()` metadata (title: "Our Story — bobaman", description, og:title, og:description, og:image from a hero lifestyle image).
+- Structure — 4 scroll-animated beats, each a full-viewport-ish section with generous whitespace, framer-motion fade/slide-in on view:
+  1. **The Spark** — opening story about why bobaman started on Spintex Road. Image: hands holding a cup / warm street shot.
+  2. **The Craft** — care in every cup. Image: close-up boba pearls falling / tea pour / condensation.
+  3. **The Community** — regulars, first-timers, personalized name-on-cup moments. Image: candid friends sharing drinks.
+  4. **The Promise** — closing beat, present-tense invitation, CTA button back to `/menu` and a WhatsApp order CTA.
+- Copy written first-person plural ("we"), warm and sincere, no corporate phrasing.
+- Generate 4 lifestyle images via `imagegen--generate_image` (standard quality, uploaded to Lovable Assets).
+- Replace homepage `BrandStory` section CTA to also link to `/story` ("Read our story →"), keep the section as a teaser.
+- Update `Nav.tsx`: replace the `#story` anchor with `<Link to="/story">Our Story</Link>`, keep `#menu` link on homepage or point to `/menu`.
 
-Generate 20 distinct bubble tea photos (one per listed drink) at 512×512 via `imagegen`, saved to `src/assets/drinks/*.jpg`. Each prompt tuned to that drink's color/toppings (e.g., dark brown swirl for Brown Sugar, purple for Taro, matcha green, Oreo-flecked, etc.) so no two cards look alike. Plus 1 hero personalization cup mockup + 1 craveworthy fruit spread illustration.
+## Technical notes
 
-## Technical
+- All new routes use TanStack `createFileRoute` with correct paths (`/menu`, `/story`).
+- Nav links to routes use `<Link to="...">` from `@tanstack/react-router`, not `<a href>`.
+- Each new route's `head()` sets a unique title + description + og tags. `og:image` only on leaf routes.
+- Framer-motion animations reuse the existing `initial/whileInView/viewport` pattern for scroll-triggered fade/slide.
+- All new images externalized via `lovable-assets` CLI, not committed as binaries.
+- No business logic / data changes — `menu.ts` untouched.
 
-- Home page replaces `src/routes/index.tsx` placeholder
-- Route `head()` sets real title/description/og — "bobaman — Bubble Tea on Spintex Road, Accra"
-- Components split under `src/components/home/` (Hero, BrandStory, Sweetness, Personalization, Craveworthy, Reviews, Menu, Toppings, Location, FloatingWhatsApp, WaveDivider)
-- Uses existing shadcn Button/Input/Card; framer-motion already available or installed via `bun add framer-motion`
-- Fully responsive, grid + min-w-0 + shrink-0 patterns on multi-item rows
-- Logo uploaded via `lovable-assets create` from `/mnt/user-uploads/`
+## Out of scope
 
-## Out of scope (noted for later)
-
-- Remaining 50+ menu items (frappes, refreshers, extra cheese series) — menu structure is extensible
-- Real reviews and real toppings list — clearly marked PLACEHOLDER
-- No backend / Lovable Cloud needed (no auth, no DB, no cart)
+- Payments, cart, backend, auth — none needed (WhatsApp remains the entire order flow).
+- Homepage layout/theme/color changes beyond the Craveworthy rework and the two new CTAs.
