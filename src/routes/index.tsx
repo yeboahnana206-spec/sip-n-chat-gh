@@ -1,24 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/home/Nav";
+import { Hero } from "@/components/home/Hero";
+import { BrandStory } from "@/components/home/BrandStory";
+import { Sweetness } from "@/components/home/Sweetness";
+import { Personalization } from "@/components/home/Personalization";
+import { Craveworthy } from "@/components/home/Craveworthy";
+import { Reviews } from "@/components/home/Reviews";
+import { Menu } from "@/components/home/Menu";
+import { Toppings } from "@/components/home/Toppings";
+import { Location } from "@/components/home/Location";
+import { Footer } from "@/components/home/Footer";
+import { FloatingWhatsApp } from "@/components/home/FloatingWhatsApp";
+import { WaveDivider } from "@/components/home/decor";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: Home,
+  head: () => ({
+    meta: [
+      { title: "bobaman — Bubble Tea on Spintex Road, Accra" },
+      { name: "description", content: "70+ handcrafted bubble tea drinks, frappes & refreshers on Spintex Road, Accra. Just sip and chop. Order in seconds via WhatsApp." },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div id="top" className="min-h-screen">
+      <Nav />
+      <Hero />
+      <BrandStory />
+      <WaveDivider fromColor="var(--caramel)" toColor="var(--cream)" />
+      <Sweetness />
+      <WaveDivider fromColor="var(--cream)" toColor="var(--peach)" />
+      <Personalization />
+      <Craveworthy />
+      <Reviews />
+      <WaveDivider fromColor="var(--peach)" toColor="var(--pink)" />
+      <Menu />
+      <Toppings />
+      <WaveDivider fromColor="var(--pink)" toColor="var(--berry)" />
+      <Location />
+      <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }
