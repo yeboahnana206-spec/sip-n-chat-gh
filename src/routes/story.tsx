@@ -7,7 +7,7 @@ import { buildGenericOrderUrl } from "@/data/menu";
 import spark from "@/assets/story/spark.jpg.asset.json";
 import craft from "@/assets/story/craft.jpg.asset.json";
 import community from "@/assets/story/community.jpg.asset.json";
-import promise from "@/assets/story/promise.jpg.asset.json";
+import promise from "@/assets/story/promise.png.asset.json";
 
 export const Route = createFileRoute("/story")({
   component: StoryPage,
@@ -85,7 +85,7 @@ const beats: Beat[] = [
       "Come thirsty. We'll take it from there.",
     ],
     image: promise,
-    alt: "A vibrant caramel brown sugar boba drink styled on a warm pink gradient background",
+    alt: "A playful shot of a customer carrying an oversized bobaman cup down the street",
     reverse: true,
     bg: "var(--berry)",
     textColor: "var(--cream)",
