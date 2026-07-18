@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import { BobaPearl } from "./decor";
 
 export function BrandStory() {
@@ -20,9 +21,16 @@ export function BrandStory() {
         <p className="mt-6 text-lg leading-relaxed text-[var(--cream)]/90">
           bobaman started with a simple idea — Accra deserves bubble tea that actually
           slaps. So we shake, brew, and pour every drink to order, chew the pearls till
-          they're perfect, and put a little joy in every cup that leaves the counter.
-          No shortcuts, no dusty syrups. Just sip and chop. 🧋
+          they're perfect, and put a little joy in every cup that leaves the counter. 🧋
         </p>
+        <div className="mt-8">
+          <Link
+            to="/story"
+            className="inline-flex items-center rounded-full bg-[var(--cream)] px-6 py-3 font-bold text-[var(--berry-ink)] shadow-lg transition-transform hover:scale-105"
+          >
+            Read our story →
+          </Link>
+        </div>
       </motion.div>
     </section>
   );
