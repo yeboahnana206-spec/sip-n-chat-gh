@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.jpeg.asset.json";
+import { Link } from "@tanstack/react-router";
+import logo from "@/assets/logo.png.asset.json";
 import { buildGenericOrderUrl } from "@/data/menu";
 
 export function Nav() {
@@ -18,14 +19,13 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3">
-        <a href="#top" className="flex min-w-0 items-center gap-2">
-          <img src={logo.url} alt="bobaman" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-[var(--cream)]" />
+        <Link to="/" className="flex min-w-0 items-center gap-2">
+          <img src={logo.url} alt="bobaman" className="h-10 w-10 shrink-0 object-contain" />
           <span className="truncate font-display text-2xl text-[var(--cream)]">bobaman</span>
-        </a>
-        <div className="flex items-center gap-2 sm:gap-4">
-          <a href="#menu" className="hidden text-sm font-bold text-[var(--cream)] hover:text-[var(--peach)] sm:inline">Menu</a>
-          <a href="#story" className="hidden text-sm font-bold text-[var(--cream)] hover:text-[var(--peach)] sm:inline">Story</a>
-          <a href="#location" className="hidden text-sm font-bold text-[var(--cream)] hover:text-[var(--peach)] sm:inline">Visit</a>
+        </Link>
+        <div className="flex items-center gap-3 sm:gap-5">
+          <Link to="/menu" className="hidden text-sm font-bold text-[var(--cream)] hover:text-[var(--peach)] sm:inline">Menu</Link>
+          <Link to="/story" className="hidden text-sm font-bold text-[var(--cream)] hover:text-[var(--peach)] sm:inline">Our Story</Link>
           <a
             href={buildGenericOrderUrl()}
             target="_blank"

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MENU, buildGenericOrderUrl } from "@/data/menu";
 import { OrderButton } from "./OrderButton";
 import { BobaPearl, TeaLeaf, Splash } from "./decor";
-import logo from "@/assets/logo.jpeg.asset.json";
+import logo from "@/assets/logo.png.asset.json";
 
 const bestSellers = MENU.flatMap((c) => c.drinks).filter((d) => d.bestSeller);
 
