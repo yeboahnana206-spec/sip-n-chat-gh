@@ -58,7 +58,7 @@ export function Craveworthy() {
           ))}
 
           {/* Fruits — scattered, floating */}
-          {fruits.map((f, i) => (
+          {fruits.map((f) => (
             <motion.img
               key={f.alt}
               src={f.src}
@@ -70,8 +70,7 @@ export function Craveworthy() {
               whileInView={{ opacity: 1, y: 0, rotate: f.rotate, scale: 1 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7, delay: f.delay, ease: "easeOut" }}
-            >
-            </motion.img>
+            />
           ))}
 
           {/* Floating pearls */}
