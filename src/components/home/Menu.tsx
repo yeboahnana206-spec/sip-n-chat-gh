@@ -21,7 +21,7 @@ export function Menu() {
         <div className="text-center">
           <span className="font-script text-2xl text-[var(--cream)]">the full menu</span>
           <h2 className="mt-1 font-display text-4xl leading-tight text-[var(--cream)] sm:text-5xl">
-            Pick your poison 🧋
+            Pick your Vibe 🧋
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-[var(--cream)]/90">
             Every drink is made to order. Tap "Order Now" and we'll pop up in your WhatsApp.
