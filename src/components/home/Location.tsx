@@ -12,6 +12,14 @@ export function Location() {
           <p className="mt-4 text-lg text-[var(--cream)]/90">
             📍 Total Energies Filling Station Dome, Spintex Road, Accra, Ghana
           </p>
+          <a
+            href="https://maps.app.goo.gl/V4ktWph1vVdhR7Bw7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-flex items-center gap-2 rounded-full bg-[var(--peach)] px-5 py-2.5 font-bold text-[var(--berry)] shadow-lg transition-transform hover:scale-105"
+          >
+            Get directions →
+          </a>
           <div className="mt-4 space-y-1 text-[var(--cream)]/90">
             <p>📱 {WHATSAPP_DISPLAY_PRIMARY}</p>
             <p>📱 {WHATSAPP_DISPLAY_SECONDARY}</p>
