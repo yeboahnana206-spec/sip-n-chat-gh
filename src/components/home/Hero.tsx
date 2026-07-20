@@ -41,7 +41,7 @@ export function Hero() {
           <p className="mt-4 text-lg text-[#F8F6F0]/90 sm:text-xl">
             70+ handcrafted bubble tea drinks, frappes, refreshers & more.
             <br className="hidden sm:inline" />
-            Freshly shaken at <strong>Total Energies Filling Station Dome, Spintex Road, Accra.</strong>
+            Freshly shaken at <strong>Total Energies Filling Station Dome, Accra.</strong>
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
             <a
