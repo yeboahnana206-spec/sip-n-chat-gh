@@ -1,25 +1,27 @@
 ## Goal
-Replace both existing logo instances (nav top-left + hero) with the newly uploaded Bobaman logo, sized larger and preserving aspect ratio and transparency. Since the new logo already contains the "bobaman" wordmark and "Just Sip and Chop" tagline baked in, remove the redundant sibling text next to each logo.
+Remove all "Spintex Road" / "Spintex" references from the site and replace with the current location (Dome, Accra — Total Energies Filling Station Dome).
 
-## Changes
+## Files to update
 
-**1. Upload new asset**
-- Run `lovable-assets create --file /mnt/user-uploads/ChatGPT_Image_Jul_20_2026_08_37_03_AM.png --filename bobaman-logo.png` → write pointer to `src/assets/logo.png.asset.json` (overwriting existing pointer so all current imports pick it up automatically).
-- Delete the old CDN asset via `lovable-assets delete` on the prior pointer before overwriting.
+1. **src/routes/__root.tsx** (lines 80–88) — replace "Spintex Road, Accra" with "Dome, Accra" in title, description, og:title, og:description, twitter:title, twitter:description.
 
-**2. `src/components/home/Nav.tsx`**
-- Use natural width sizing (not square h/w) to preserve aspect ratio: `w-[140px] sm:w-[180px] md:w-[220px] lg:w-[240px] h-auto`.
-- Remove the sibling `<span>bobaman</span>` (text is in the logo itself).
-- Keep left alignment, vertical centering, and padding for breathing room. Keep spacing to nav links intact.
+2. **src/routes/index.tsx** (lines 20–21) — same swap in home route title and description.
 
-**3. `src/components/home/Hero.tsx`**
-- Replace the logo `<img>` + adjacent `<span>just sip and chop.</span>` block with just the logo image (both are in the artwork).
-- Size: `w-[240px] sm:w-[320px] md:w-[400px] lg:w-[480px] h-auto` (hero gets a larger treatment consistent with prior emphasis, still proportional).
-- Preserve drop-shadow.
+3. **src/routes/menu.tsx** (line 12) — "Full Menu — bobaman Bubble Tea, Dome, Accra".
 
-**4. `src/components/home/Footer.tsx`**
-- Update logo rendering to use natural aspect ratio (`w-24 h-auto`, remove `rounded-full`/`ring` since the new logo is a full illustration, not a circular mark). Remove the redundant "bobaman" + "just sip and chop." text lines beneath it.
+4. **src/routes/story.tsx** — update:
+   - line 16 title → "Our Story — bobaman Bubble Tea, Dome Accra"
+   - line 17 description → replace "Spintex Road, Accra" with "Dome, Accra"
+   - line 19 og:description → replace "corner of Spintex Road" with "corner of Dome"
+   - line 45 body copy → "We picked a spot in Dome, ..."
+   - line 48 alt text → "... at golden hour in Dome"
+   - line 84 body copy → "a small daily treat in Dome worth looking forward to."
+   - line 158 hero headline → "A craving, a corner / of Dome, and / a whole lot of boba."
 
-## Out of scope
-- No changes to nav link styles, colors, routes, or any other section.
-- No hero copy (h1 "bobaman", description paragraph) changes.
+5. **src/data/menu.ts** (line 103) — testimonial: "My go-to spot in Dome now, quality never drops".
+
+6. **src/components/home/Location.tsx** (line 40) — iframe title → "bobaman at Total Energies Filling Station Dome, Accra".
+
+7. **src/components/home/Footer.tsx** (line 8) — footer address → "© YEAR bobaman · Total Energies Filling Station Dome, Accra, Ghana".
+
+No other files reference Spintex. Map embed URL and displayed address strings already reflect Dome and don't need changes.
