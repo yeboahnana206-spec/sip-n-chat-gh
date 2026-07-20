@@ -34,12 +34,12 @@ export function Hero() {
               alt="bobaman logo"
               className="h-28 w-28 shrink-0 object-contain drop-shadow-2xl sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-52 lg:w-52"
             />
-            <span className="font-script text-2xl text-[var(--cream)] sm:text-3xl md:text-4xl">just sip and chop.</span>
+            <span className="font-script text-2xl text-[#F8F6F0] sm:text-3xl md:text-4xl">just sip and chop.</span>
           </div>
-          <h1 className="font-display text-[64px] leading-[0.9] text-[var(--cream)] sm:text-[88px] md:text-[110px]">
+          <h1 className="font-display text-[64px] leading-[0.9] text-[#F8F6F0] sm:text-[88px] md:text-[110px]">
             boba<span className="text-[var(--peach)]">man</span>
           </h1>
-          <p className="mt-4 text-lg text-[var(--cream)]/90 sm:text-xl">
+          <p className="mt-4 text-lg text-[#F8F6F0]/90 sm:text-xl">
             70+ handcrafted bubble tea drinks, frappes, refreshers & more.
             <br className="hidden sm:inline" />
             Freshly shaken on <strong>Spintex Road, Accra.</strong>
