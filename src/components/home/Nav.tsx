@@ -19,11 +19,11 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-4 sm:py-5">
-        <Link to="/" className="flex min-w-0 items-center gap-3 p-2">
+        <Link to="/" className="flex min-w-0 items-center gap-3 p-2 sm:gap-4 sm:p-3">
           <img
             src={logo.url}
             alt="bobaman"
-            className="h-14 w-14 shrink-0 object-contain drop-shadow-md sm:h-16 sm:w-16 md:h-20 md:w-20"
+            className="h-16 w-16 shrink-0 object-contain drop-shadow-lg sm:h-20 sm:w-20 md:h-24 md:w-24"
           />
           <span className="truncate font-display text-2xl text-[#F8F6F0] sm:text-3xl">bobaman</span>
         </Link>
