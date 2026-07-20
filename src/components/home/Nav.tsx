@@ -23,7 +23,9 @@ export function Nav() {
           <img
             src={logo.url}
             alt="bobaman — just sip and chop"
-            className="h-auto w-[140px] shrink-0 object-contain drop-shadow-lg sm:w-[180px] md:w-[220px] lg:w-[240px]"
+            className={`h-auto w-[140px] shrink-0 object-contain drop-shadow-lg transition-opacity duration-[250ms] sm:w-[180px] md:w-[220px] lg:w-[240px] ${
+              scrolled ? "opacity-100" : "pointer-events-none opacity-0"
+            }`}
           />
         </Link>
         <div className="flex items-center gap-4 sm:gap-7">
