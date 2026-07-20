@@ -34,7 +34,7 @@ export function Hero() {
               alt="bobaman logo"
               className="h-28 w-28 shrink-0 object-contain drop-shadow-2xl sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-52 lg:w-52"
             />
-            <span className="font-script text-2xl text-[#F8F6F0] sm:text-3xl md:text-4xl">just sip and chop.</span>
+            <span className="font-script text-4xl text-[#F8F6F0] drop-shadow-md sm:text-5xl md:text-6xl">just sip and chop.</span>
           </div>
           <h1 className="font-display text-[64px] leading-[0.9] text-[#F8F6F0] sm:text-[88px] md:text-[110px]">
             boba<span className="text-[var(--peach)]">man</span>

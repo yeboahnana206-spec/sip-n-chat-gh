@@ -23,9 +23,9 @@ export function Nav() {
           <img
             src={logo.url}
             alt="bobaman"
-            className="h-16 w-16 shrink-0 object-contain drop-shadow-lg sm:h-20 sm:w-20 md:h-24 md:w-24"
+            className="h-20 w-20 shrink-0 object-contain drop-shadow-lg sm:h-24 sm:w-24 md:h-28 md:w-28"
           />
-          <span className="truncate font-display text-2xl text-[#F8F6F0] sm:text-3xl">bobaman</span>
+          <span className="truncate font-display text-3xl font-bold text-[#F8F6F0] sm:text-4xl md:text-5xl">bobaman</span>
         </Link>
         <div className="flex items-center gap-4 sm:gap-7">
           <Link to="/menu" className="nav-link hidden sm:inline">Menu</Link>
