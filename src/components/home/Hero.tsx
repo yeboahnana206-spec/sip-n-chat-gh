@@ -28,13 +28,13 @@ export function Hero() {
 
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 md:grid-cols-2">
         <div className="relative z-10 text-center md:text-left">
-          <div className="mb-4 flex items-center justify-center gap-4 p-3 sm:p-4 md:justify-start">
+          <div className="mb-6 flex items-center justify-center gap-5 p-4 sm:p-6 md:justify-start md:p-8">
             <img
               src={logo.url}
               alt="bobaman logo"
-              className="h-20 w-20 shrink-0 object-contain drop-shadow-lg sm:h-24 sm:w-24 md:h-28 md:w-28 lg:h-32 lg:w-32"
+              className="h-28 w-28 shrink-0 object-contain drop-shadow-2xl sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-52 lg:w-52"
             />
-            <span className="font-script text-2xl text-[var(--cream)] sm:text-3xl">just sip and chop.</span>
+            <span className="font-script text-2xl text-[var(--cream)] sm:text-3xl md:text-4xl">just sip and chop.</span>
           </div>
           <h1 className="font-display text-[64px] leading-[0.9] text-[var(--cream)] sm:text-[88px] md:text-[110px]">
             boba<span className="text-[var(--peach)]">man</span>
