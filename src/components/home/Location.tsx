@@ -7,10 +7,10 @@ export function Location() {
         <div className="text-center md:text-left">
           <span className="font-script text-2xl text-[var(--peach)]">come thru</span>
           <h2 className="mt-1 font-display text-4xl leading-tight text-[var(--cream)] sm:text-5xl">
-            Find us on Spintex.
+            Find us at Total Energies.
           </h2>
           <p className="mt-4 text-lg text-[var(--cream)]/90">
-            📍 Spintex Road, Accra, Ghana
+            📍 Total Energies Filling Station Dome, Spintex Road, Accra, Ghana
           </p>
           <div className="mt-4 space-y-1 text-[var(--cream)]/90">
             <p>📱 {WHATSAPP_DISPLAY_PRIMARY}</p>
@@ -29,7 +29,7 @@ export function Location() {
 
         <div className="overflow-hidden rounded-3xl border-4 border-[var(--cream)] shadow-2xl">
           <iframe
-            title="bobaman on Spintex Road, Accra"
+            title="bobaman at Total Energies Filling Station Dome, Spintex Road, Accra"
             src="https://maps.app.goo.gl/V4ktWph1vVdhR7Bw7"
             className="h-[360px] w-full"
             loading="lazy"
