@@ -13,10 +13,10 @@ export const Route = createFileRoute("/story")({
   component: StoryPage,
   head: () => ({
     meta: [
-      { title: "Our Story — bobaman Bubble Tea, Spintex Road Accra" },
-      { name: "description", content: "How bobaman started, the care in every cup, the regulars who make it home. Bubble tea handcrafted with love on Spintex Road, Accra." },
+      { title: "Our Story — bobaman Bubble Tea, Dome Accra" },
+      { name: "description", content: "How bobaman started, the care in every cup, the regulars who make it home. Bubble tea handcrafted with love in Dome, Accra." },
       { property: "og:title", content: "Our Story — bobaman" },
-      { property: "og:description", content: "A craving, a corner of Spintex Road, and a whole lot of boba. This is us." },
+      { property: "og:description", content: "A craving, a corner of Dome, and a whole lot of boba. This is us." },
       { property: "og:type", content: "article" },
       { property: "og:image", content: spark.url },
       { property: "twitter:image", content: spark.url },
@@ -42,10 +42,10 @@ const beats: Beat[] = [
     title: "It started with a craving.",
     body: [
       "We were the ones circling Accra late at night, looking for a proper cup of bubble tea and coming up empty. The kind of drink where the pearls actually chew right and the milk tea doesn't taste like it's been sitting since morning.",
-      "So we stopped waiting for someone else to open it. We picked a spot on Spintex Road, learned the recipes till our hands knew them, and put up a little counter for anyone who was looking for the same thing we were.",
+      "So we stopped waiting for someone else to open it. We picked a spot in Dome, learned the recipes till our hands knew them, and put up a little counter for anyone who was looking for the same thing we were.",
     ],
     image: spark,
-    alt: "A pair of hands holding a fresh cup of brown sugar milk tea at golden hour on Spintex Road",
+    alt: "A pair of hands holding a fresh cup of brown sugar milk tea at golden hour in Dome",
     bg: "var(--caramel)",
     textColor: "var(--cream)",
     kickerColor: "var(--peach)",
@@ -81,7 +81,7 @@ const beats: Beat[] = [
     kicker: "the promise",
     title: "Every time you order, we mean it.",
     body: [
-      "Same care whether it's your first cup or your fiftieth. Same pearls, same shake, same little joy in a cup. That's what we're here for — a small daily treat on Spintex worth looking forward to.",
+      "Same care whether it's your first cup or your fiftieth. Same pearls, same shake, same little joy in a cup. That's what we're here for — a small daily treat in Dome worth looking forward to.",
       "Come thirsty. We'll take it from there.",
     ],
     image: promise,
@@ -155,7 +155,7 @@ function StoryPage() {
         >
           <span className="font-script text-2xl text-[var(--peach)]">our story</span>
           <h1 className="mt-2 font-display text-5xl leading-[0.95] text-[var(--cream)] sm:text-7xl">
-            A craving, a corner<br />of Spintex, and<br />a whole lot of boba.
+            A craving, a corner<br />of Dome, and<br />a whole lot of boba.
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-[var(--cream)]/90">
             This is how bobaman got here — and why every cup we hand across the counter still means something to us.

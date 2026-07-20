@@ -9,7 +9,7 @@ export const Route = createFileRoute("/menu")({
   component: MenuPage,
   head: () => ({
     meta: [
-      { title: "Full Menu — bobaman Bubble Tea, Spintex Road" },
+      { title: "Full Menu — bobaman Bubble Tea, Dome Accra" },
       { name: "description", content: "Explore every bobaman drink — signature milk teas, taro delights, cheese series & toppings. Order any drink in seconds via WhatsApp." },
       { property: "og:title", content: "Full Menu — bobaman Bubble Tea" },
       { property: "og:description", content: "Every drink, every size, every price. Order in seconds via WhatsApp." },

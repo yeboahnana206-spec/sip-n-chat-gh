@@ -17,8 +17,8 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "bobaman — Bubble Tea on Spintex Road, Accra" },
-      { name: "description", content: "70+ handcrafted bubble tea drinks, frappes & refreshers on Spintex Road, Accra. Just sip and chop. Order in seconds via WhatsApp." },
+      { title: "bobaman — Bubble Tea in Dome, Accra" },
+      { name: "description", content: "70+ handcrafted bubble tea drinks, frappes & refreshers in Dome, Accra. Just sip and chop. Order in seconds via WhatsApp." },
     ],
   }),
 });
