@@ -19,13 +19,12 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-4 sm:py-5">
-        <Link to="/" className="flex min-w-0 items-center gap-3 p-2 sm:gap-4 sm:p-3">
+        <Link to="/" className="flex min-w-0 items-center p-2 sm:p-3">
           <img
             src={logo.url}
-            alt="bobaman"
-            className="h-20 w-20 shrink-0 object-contain drop-shadow-lg sm:h-24 sm:w-24 md:h-28 md:w-28"
+            alt="bobaman — just sip and chop"
+            className="h-auto w-[140px] shrink-0 object-contain drop-shadow-lg sm:w-[180px] md:w-[220px] lg:w-[240px]"
           />
-          <span className="truncate font-display text-3xl font-bold text-[#F8F6F0] sm:text-4xl md:text-5xl">bobaman</span>
         </Link>
         <div className="flex items-center gap-4 sm:gap-7">
           <Link to="/menu" className="nav-link hidden sm:inline">Menu</Link>
