@@ -30,7 +30,7 @@ export function Location() {
         <div className="overflow-hidden rounded-3xl border-4 border-[var(--cream)] shadow-2xl">
           <iframe
             title="bobaman on Spintex Road, Accra"
-            src="https://www.google.com/maps?q=Spintex+Road+Accra+Ghana&output=embed"
+            src="https://maps.app.goo.gl/V4ktWph1vVdhR7Bw7"
             className="h-[360px] w-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
