@@ -38,10 +38,11 @@ export function Location() {
         <div className="overflow-hidden rounded-3xl border-4 border-[var(--cream)] shadow-2xl">
           <iframe
             title="bobaman at Total Energies Filling Station Dome, Spintex Road, Accra"
-            src="https://maps.app.goo.gl/V4ktWph1vVdhR7Bw7"
-            className="h-[360px] w-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127042.21764419563!2d-0.39171987264222774!3d5.703128244417858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9f0ded947901%3A0x1c6b4bac20057efb!2sTotal%20Energies%20Filling%20Station%20Dome!5e0!3m2!1sen!2sgh!4v1784559553647!5m2!1sen!2sgh"
+            className="h-[450px] w-full border-0"
+            allowFullScreen
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerPolicy="strict-origin-when-cross-origin"
           />
         </div>
       </div>
