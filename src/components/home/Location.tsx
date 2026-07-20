@@ -10,7 +10,7 @@ export function Location() {
             Find us at Total Energies.
           </h2>
           <p className="mt-4 text-lg text-[var(--cream)]/90">
-            📍 Total Energies Filling Station Dome, Spintex Road, Accra, Ghana
+            📍 Total Energies Filling Station Dome, Accra, Ghana
           </p>
           <a
             href="https://maps.app.goo.gl/V4ktWph1vVdhR7Bw7"
