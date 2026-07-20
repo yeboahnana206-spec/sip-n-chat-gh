@@ -100,7 +100,7 @@ export const REVIEWS = [
   { name: "Kwabena", stars: 5, text: "First time trying taro milk tea and I'm obsessed. Super friendly staff too" },
   { name: "Efua", stars: 5, text: "Ordering through WhatsApp was so easy, drink was ready by the time I got there" },
   { name: "Yaw", stars: 4, text: "The cheese foam ones are unreal, don't sleep on those" },
-  { name: "Naa", stars: 5, text: "My go-to spot on Spintex now, quality never drops" },
+  { name: "Naa", stars: 5, text: "My go-to spot in Dome now, quality never drops" },
   { name: "Kojo", stars: 5, text: "Matcha milk tea + extra pearls = happiness in a cup 💚" },
   { name: "Adwoa", stars: 5, text: "Cute lil personalized cup made my whole day fr" },
 ];
